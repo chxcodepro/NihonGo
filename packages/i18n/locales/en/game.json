@@ -1,0 +1,29 @@
+{
+  "title": "Game Center",
+  "typing_race": {
+    "title": "Typing Race",
+    "description": "Race against AI in typing speed",
+    "difficulty": "Difficulty",
+    "opponent": "Choose Opponent",
+    "start": "Start Race",
+    "you": "You",
+    "ai": "AI",
+    "wpm": "WPM",
+    "accuracy": "Accuracy",
+    "result": { "win": "You Win!", "lose": "AI Wins", "draw": "Draw" },
+    "play_again": "Play Again"
+  },
+  "sokoban": {
+    "title": "Grammar Sokoban",
+    "description": "Learn grammar through Sokoban puzzles",
+    "level": "Level {level}",
+    "moves": "Moves",
+    "reset": "Reset Level",
+    "hint": "Hint",
+    "correct": "Correct!",
+    "incorrect": "Incorrect, box bounced back",
+    "complete": "Level Complete!",
+    "stars": "{count} Stars",
+    "next_level": "Next Level"
+  }
+}

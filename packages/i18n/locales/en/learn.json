@@ -1,0 +1,68 @@
+{
+  "title": "Learning Center",
+  "overview": "Overview",
+  "daily_goal": "Daily Goal",
+  "progress": "Progress",
+  "recent": "Recent",
+  "kana": {
+    "title": "Kana Chart",
+    "hiragana": "Hiragana",
+    "katakana": "Katakana",
+    "all": "All",
+    "romaji": "Romaji",
+    "stroke_order": "Stroke Order",
+    "examples": "Examples",
+    "quiz": "Quiz",
+    "mastered": "Mastered",
+    "learning": "Learning"
+  },
+  "vocabulary": {
+    "title": "Vocabulary",
+    "browse": "Browse",
+    "review": "Review",
+    "level_filter": "Level Filter",
+    "word": "Word",
+    "reading": "Reading",
+    "meaning": "Meaning",
+    "example": "Example",
+    "forgot": "Forgot",
+    "hard": "Hard",
+    "good": "Good",
+    "easy": "Easy",
+    "cards_remaining": "{count} cards remaining",
+    "review_complete": "Review complete for today!"
+  },
+  "grammar": {
+    "title": "Grammar",
+    "structure": "Structure",
+    "explanation": "Explanation",
+    "examples": "Examples",
+    "practice": "Practice",
+    "notes": "Notes",
+    "exercise": {
+      "multiple_choice": "Multiple Choice",
+      "fill_blank": "Fill in the Blank",
+      "reorder": "Reorder",
+      "correct": "Correct!",
+      "incorrect": "Incorrect",
+      "check": "Check Answer",
+      "next": "Next"
+    }
+  },
+  "typing": {
+    "title": "Typing Practice",
+    "mode": {
+      "kana_to_romaji": "Kana to Romaji",
+      "romaji_to_kana": "Romaji to Kana",
+      "word": "Word Mode",
+      "sentence": "Sentence Mode"
+    },
+    "difficulty": { "easy": "Easy", "medium": "Medium", "hard": "Hard" },
+    "wpm": "WPM",
+    "accuracy": "Accuracy",
+    "time": "Time",
+    "start": "Start",
+    "restart": "Restart",
+    "complete": "Practice Complete!"
+  }
+}

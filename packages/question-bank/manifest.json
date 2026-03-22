@@ -1,0 +1,13 @@
+{
+  "version": "0.1.0",
+  "modules": {
+    "kana": { "hiragana": 46, "katakana": 46 },
+    "vocabulary": { "n5": 50 },
+    "grammar": { "n5": 20 },
+    "typing": { "materials": 30 }
+  },
+  "games": {
+    "typing-race": { "levels": 3 },
+    "sokoban": { "levels": 5 }
+  }
+}

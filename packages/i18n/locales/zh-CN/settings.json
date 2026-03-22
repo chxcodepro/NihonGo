@@ -1,0 +1,19 @@
+{
+  "title": "设置",
+  "appearance": { "title": "外观", "theme": "主题" },
+  "language": { "title": "语言", "interface": "界面语言" },
+  "learning": {
+    "title": "学习偏好",
+    "daily_goal": "每日目标（分钟）",
+    "new_cards": "每日新卡片数",
+    "review_limit": "每日复习上限"
+  },
+  "about": {
+    "title": "关于",
+    "version": "当前版本",
+    "check_update": "检查更新",
+    "up_to_date": "已是最新版本",
+    "license": "开源许可",
+    "github": "GitHub 仓库"
+  }
+}

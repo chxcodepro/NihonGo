@@ -1,0 +1,20 @@
+{
+  "title": "AI日本語会話",
+  "new_conversation": "新しい会話",
+  "conversations": "会話履歴",
+  "delete_conversation": "会話を削除",
+  "input_placeholder": "日本語で何か言ってみよう...",
+  "send": "送信",
+  "scenes": {
+    "title": "シーンを選ぶ",
+    "self_intro": "自己紹介",
+    "restaurant": "レストラン注文",
+    "ask_direction": "道を聞く",
+    "interview": "面接",
+    "daily": "日常会話"
+  },
+  "correction": "訂正",
+  "grammar_tip": "文法ヒント",
+  "natural_expression": "自然な表現",
+  "login_required": "AI会話を利用するにはログインしてください"
+}

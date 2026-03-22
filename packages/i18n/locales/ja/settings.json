@@ -1,0 +1,19 @@
+{
+  "title": "設定",
+  "appearance": { "title": "外観", "theme": "テーマ" },
+  "language": { "title": "言語", "interface": "表示言語" },
+  "learning": {
+    "title": "学習設定",
+    "daily_goal": "一日の目標（分）",
+    "new_cards": "一日の新規カード数",
+    "review_limit": "一日の復習上限"
+  },
+  "about": {
+    "title": "について",
+    "version": "バージョン",
+    "check_update": "アップデートを確認",
+    "up_to_date": "最新バージョンです",
+    "license": "ライセンス",
+    "github": "GitHubリポジトリ"
+  }
+}

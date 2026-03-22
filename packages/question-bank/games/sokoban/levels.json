@@ -1,0 +1,215 @@
+[
+  {
+    "id": "sokoban_1",
+    "name": "第一关：基础判断句",
+    "difficulty": 1,
+    "grid": [
+      [1,1,1,1,1],
+      [1,0,0,0,1],
+      [1,0,0,0,1],
+      [1,0,0,0,1],
+      [1,1,1,1,1]
+    ],
+    "playerStart": [1,1],
+    "boxes": [[2,2]],
+    "targets": [[3,3]],
+    "grammarPoints": [
+      {
+        "boxIndex": 0,
+        "grammarId": "grammar_n5_001",
+        "question": "「私___学生です」の___に入る助詞は？",
+        "options": ["は", "が", "を", "に"],
+        "correctIndex": 0,
+        "explanation": "は是主题标记助词"
+      }
+    ]
+  },
+  {
+    "id": "sokoban_2",
+    "name": "第二关：肯定与否定",
+    "difficulty": 2,
+    "grid": [
+      [1,1,1,1,1,1],
+      [1,0,0,0,0,1],
+      [1,0,0,0,0,1],
+      [1,0,0,0,0,1],
+      [1,0,0,0,0,1],
+      [1,1,1,1,1,1]
+    ],
+    "playerStart": [1,1],
+    "boxes": [[2,2], [3,3]],
+    "targets": [[4,4], [4,1]],
+    "grammarPoints": [
+      {
+        "boxIndex": 0,
+        "grammarId": "grammar_n5_003",
+        "question": "「毎日勉強___」の___に入るのは？",
+        "options": ["します", "しません", "しました", "するます"],
+        "correctIndex": 0,
+        "explanation": "します是する的ます形"
+      },
+      {
+        "boxIndex": 1,
+        "grammarId": "grammar_n5_004",
+        "question": "「肉を食べ___」（否定）の___に入るのは？",
+        "options": ["ません", "ます", "ました", "ないです"],
+        "correctIndex": 0,
+        "explanation": "ません是ます的否定形式"
+      }
+    ]
+  },
+  {
+    "id": "sokoban_3",
+    "name": "第三关：时态变化",
+    "difficulty": 3,
+    "grid": [
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,1],
+      [1,0,0,0,0,0,1],
+      [1,0,0,0,0,0,1],
+      [1,0,0,0,0,0,1],
+      [1,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "playerStart": [1,1],
+    "boxes": [[2,2], [3,4], [4,2]],
+    "targets": [[5,5], [5,3], [5,1]],
+    "grammarPoints": [
+      {
+        "boxIndex": 0,
+        "grammarId": "grammar_n5_005",
+        "question": "「昨日映画を見___」（过去肯定）の___に入るのは？",
+        "options": ["ました", "ます", "ません", "ませんでした"],
+        "correctIndex": 0,
+        "explanation": "ました是ます的过去肯定形式"
+      },
+      {
+        "boxIndex": 1,
+        "grammarId": "grammar_n5_006",
+        "question": "「昨日勉強し___」（过去否定）の___に入るのは？",
+        "options": ["ませんでした", "ません", "ました", "ます"],
+        "correctIndex": 0,
+        "explanation": "ませんでした是ます的过去否定形式"
+      },
+      {
+        "boxIndex": 2,
+        "grammarId": "grammar_n5_008",
+        "question": "「本を読んで___」（正在进行）の___に入るのは？",
+        "options": ["います", "あります", "おきます", "しまいます"],
+        "correctIndex": 0,
+        "explanation": "ています表示正在进行"
+      }
+    ]
+  },
+  {
+    "id": "sokoban_4",
+    "name": "第四关：愿望与能力",
+    "difficulty": 4,
+    "grid": [
+      [1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,1],
+      [1,0,1,0,1,0,1],
+      [1,0,0,0,0,0,1],
+      [1,0,1,0,1,0,1],
+      [1,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1]
+    ],
+    "playerStart": [1,1],
+    "boxes": [[1,3], [3,1], [3,5], [5,3]],
+    "targets": [[5,1], [5,5], [1,5], [3,3]],
+    "grammarPoints": [
+      {
+        "boxIndex": 0,
+        "grammarId": "grammar_n5_009",
+        "question": "「日本に行き___です」（想去）の___に入るのは？",
+        "options": ["たい", "ます", "ません", "ました"],
+        "correctIndex": 0,
+        "explanation": "たい表示想要做某事"
+      },
+      {
+        "boxIndex": 1,
+        "grammarId": "grammar_n5_013",
+        "question": "「日本語を話す___ができます」の___に入るのは？",
+        "options": ["こと", "もの", "ため", "よう"],
+        "correctIndex": 0,
+        "explanation": "ことができる表示有能力做某事"
+      },
+      {
+        "boxIndex": 2,
+        "grammarId": "grammar_n5_015",
+        "question": "「写真を撮っ___いいですか」の___に入るのは？",
+        "options": ["ても", "ては", "てが", "てを"],
+        "correctIndex": 0,
+        "explanation": "てもいい表示许可"
+      },
+      {
+        "boxIndex": 3,
+        "grammarId": "grammar_n5_010",
+        "question": "「映画を見___行きます」の___に入るのは？",
+        "options": ["に", "を", "が", "で"],
+        "correctIndex": 0,
+        "explanation": "に表示目的"
+      }
+    ]
+  },
+  {
+    "id": "sokoban_5",
+    "name": "第五关：综合挑战",
+    "difficulty": 5,
+    "grid": [
+      [1,1,1,1,1,1,1,1],
+      [1,0,0,0,0,0,0,1],
+      [1,0,0,0,1,0,0,1],
+      [1,0,0,0,0,0,0,1],
+      [1,0,1,0,0,0,0,1],
+      [1,0,0,0,0,1,0,1],
+      [1,0,0,0,0,0,0,1],
+      [1,1,1,1,1,1,1,1]
+    ],
+    "playerStart": [1,1],
+    "boxes": [[1,3], [2,5], [3,2], [4,5], [6,3]],
+    "targets": [[6,1], [6,6], [1,6], [3,6], [4,1]],
+    "grammarPoints": [
+      {
+        "boxIndex": 0,
+        "grammarId": "grammar_n5_014",
+        "question": "「宿題をし___なりません」（必须做）の___に入るのは？",
+        "options": ["なければ", "なくて", "ないで", "なくても"],
+        "correctIndex": 0,
+        "explanation": "なければならない表示必须"
+      },
+      {
+        "boxIndex": 1,
+        "grammarId": "grammar_n5_016",
+        "question": "「ここで写真を撮ら___ください」（请不要）の___に入るのは？",
+        "options": ["ないで", "なくて", "ませんで", "ないと"],
+        "correctIndex": 0,
+        "explanation": "ないでください表示请不要"
+      },
+      {
+        "boxIndex": 2,
+        "grammarId": "grammar_n5_017",
+        "question": "「日本に行っ___ことがあります」の___に入るのは？",
+        "options": ["た", "て", "る", "ない"],
+        "correctIndex": 0,
+        "explanation": "た形+ことがある表示经历"
+      },
+      {
+        "boxIndex": 3,
+        "grammarId": "grammar_n5_019",
+        "question": "「薬を飲ん___ほうがいいですよ」の___に入るのは？",
+        "options": ["だ", "た", "て", "る"],
+        "correctIndex": 0,
+        "explanation": "た形+ほうがいい表示建议"
+      },
+      {
+        "boxIndex": 4,
+        "grammarId": "grammar_n5_020",
+        "question": "「この料理はおいし___です」（看起来）の___に入るのは？",
+        "options": ["そう", "よう", "みたい", "らしい"],
+        "correctIndex": 0,
+        "explanation": "そうだ表示根据外观推测"
+      }
+    ]
+  }
+]

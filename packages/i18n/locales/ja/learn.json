@@ -1,0 +1,68 @@
+{
+  "title": "学習センター",
+  "overview": "学習概要",
+  "daily_goal": "一日の目標",
+  "progress": "学習進捗",
+  "recent": "最近の学習",
+  "kana": {
+    "title": "五十音図",
+    "hiragana": "ひらがな",
+    "katakana": "カタカナ",
+    "all": "すべて",
+    "romaji": "ローマ字",
+    "stroke_order": "書き順",
+    "examples": "例語",
+    "quiz": "クイズ",
+    "mastered": "習得済み",
+    "learning": "学習中"
+  },
+  "vocabulary": {
+    "title": "語彙学習",
+    "browse": "閲覧モード",
+    "review": "復習モード",
+    "level_filter": "レベル選択",
+    "word": "単語",
+    "reading": "読み",
+    "meaning": "意味",
+    "example": "例文",
+    "forgot": "忘れた",
+    "hard": "難しい",
+    "good": "覚えた",
+    "easy": "簡単",
+    "cards_remaining": "残り {count} 枚",
+    "review_complete": "今日の復習完了！"
+  },
+  "grammar": {
+    "title": "文法学習",
+    "structure": "文型構造",
+    "explanation": "文法解説",
+    "examples": "例文",
+    "practice": "練習",
+    "notes": "メモ",
+    "exercise": {
+      "multiple_choice": "選択問題",
+      "fill_blank": "穴埋め問題",
+      "reorder": "並べ替え問題",
+      "correct": "正解！",
+      "incorrect": "不正解",
+      "check": "答えを確認",
+      "next": "次の問題"
+    }
+  },
+  "typing": {
+    "title": "タイピング練習",
+    "mode": {
+      "kana_to_romaji": "かな→ローマ字",
+      "romaji_to_kana": "ローマ字→かな",
+      "word": "単語モード",
+      "sentence": "文章モード"
+    },
+    "difficulty": { "easy": "初級", "medium": "中級", "hard": "上級" },
+    "wpm": "WPM",
+    "accuracy": "正確率",
+    "time": "時間",
+    "start": "練習開始",
+    "restart": "やり直す",
+    "complete": "練習完了！"
+  }
+}

@@ -84,28 +84,21 @@ Zustand (轻量级状态管理)
 
 ```
 app/
-├── (public)/               # 无需登录
-│   ├── page.tsx            # 首页/着陆页
-│   ├── learn/
-│   │   ├── kana/           # 五十音
-│   │   ├── vocabulary/     # 词汇
-│   │   ├── grammar/        # 语法
-│   │   └── typing/         # 打字练习
-│   ├── game/
-│   │   ├── typing-race/    # 打字竞速
-│   │   └── sokoban/        # 推箱子
-│   └── settings/           # 设置（不登录也可改主题/语言）
-│
-├── (auth)/                 # 认证页面
-│   ├── login/
-│   ├── register/
-│   └── verify-email/
-│
-├── (protected)/            # 需登录
-│   ├── ai-chat/            # AI对话
-│   ├── profile/            # 个人中心
-│   └── sync/               # 数据同步
-│
+├── page.tsx                # 首页/着陆页
+├── login/                  # 登录
+├── register/               # 注册
+├── callback/               # OAuth回调
+├── learn/
+│   ├── kana/               # 五十音
+│   ├── vocabulary/         # 词汇
+│   ├── grammar/            # 语法
+│   └── typing/             # 打字练习
+├── game/
+│   ├── typing-race/        # 打字竞速
+│   └── sokoban/            # 推箱子
+├── settings/               # 设置（不登录也可改主题/语言）
+├── ai-chat/                # AI对话
+├── profile/                # 个人中心
 └── api/                    # BFF (如需)
 ```
 

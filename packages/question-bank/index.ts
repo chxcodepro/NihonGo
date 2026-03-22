@@ -1,0 +1,7 @@
+export { default as hiraganaData } from './modules/kana/hiragana.json'
+export { default as katakanaData } from './modules/kana/katakana.json'
+export { default as vocabN5Data } from './modules/vocabulary/n5.json'
+export { default as grammarN5Data } from './modules/grammar/n5.json'
+export { default as typingMaterials } from './modules/typing/materials.json'
+export { default as typingRaceLevels } from './games/typing-race/levels.json'
+export { default as sokobanLevels } from './games/sokoban/levels.json'

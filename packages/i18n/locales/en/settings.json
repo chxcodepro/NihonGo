@@ -1,0 +1,19 @@
+{
+  "title": "Settings",
+  "appearance": { "title": "Appearance", "theme": "Theme" },
+  "language": { "title": "Language", "interface": "Interface Language" },
+  "learning": {
+    "title": "Learning Preferences",
+    "daily_goal": "Daily Goal (minutes)",
+    "new_cards": "New Cards per Day",
+    "review_limit": "Daily Review Limit"
+  },
+  "about": {
+    "title": "About",
+    "version": "Version",
+    "check_update": "Check for Updates",
+    "up_to_date": "Up to date",
+    "license": "License",
+    "github": "GitHub Repository"
+  }
+}

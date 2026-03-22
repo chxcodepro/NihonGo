@@ -1,0 +1,20 @@
+[
+  {
+    "id": "race_easy",
+    "difficulty": "easy",
+    "texts": ["あいうえお", "かきくけこ", "さしすせそ"],
+    "aiWpmRange": [30, 50]
+  },
+  {
+    "id": "race_medium",
+    "difficulty": "medium",
+    "texts": ["おはようございます", "ありがとうございます", "すみません"],
+    "aiWpmRange": [50, 80]
+  },
+  {
+    "id": "race_hard",
+    "difficulty": "hard",
+    "texts": ["日本語を勉強しています", "明日東京に行きます", "この本はとても面白いです"],
+    "aiWpmRange": [80, 120]
+  }
+]

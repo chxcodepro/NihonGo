@@ -1,0 +1,20 @@
+{
+  "title": "AI Japanese Conversation",
+  "new_conversation": "New Conversation",
+  "conversations": "History",
+  "delete_conversation": "Delete Conversation",
+  "input_placeholder": "Say something in Japanese...",
+  "send": "Send",
+  "scenes": {
+    "title": "Choose a Scene",
+    "self_intro": "Self Introduction",
+    "restaurant": "Restaurant Ordering",
+    "ask_direction": "Asking Directions",
+    "interview": "Interview",
+    "daily": "Daily Chat"
+  },
+  "correction": "Correction",
+  "grammar_tip": "Grammar Tip",
+  "natural_expression": "Natural Expression",
+  "login_required": "Please login to use AI conversation"
+}

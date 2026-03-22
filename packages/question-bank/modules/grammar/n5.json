@@ -1,0 +1,342 @@
+[
+  {
+    "id": "grammar_n5_001",
+    "pattern": "～は～です",
+    "titleZh": "判断句（肯定）",
+    "titleEn": "Copula (affirmative)",
+    "structure": "A は B です",
+    "explanationZh": "表示'A是B'，は是主题标记助词，です是敬体判断词。",
+    "explanationEn": "Means 'A is B'. は marks the topic, です is the polite copula.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "私は学生です。", "reading": "わたしはがくせいです。", "meaningZh": "我是学生。", "meaningEn": "I am a student." },
+      { "japanese": "これは本です。", "reading": "これはほんです。", "meaningZh": "这是书。", "meaningEn": "This is a book." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "私___学生です。", "answer": "は", "explanation": "は是主题标记助词" },
+      { "type": "multiple_choice", "question": "「我是老师」的日语是？", "options": ["私は先生です", "私が先生です", "私を先生です", "私に先生です"], "correctIndex": 0 }
+    ]
+  },
+  {
+    "id": "grammar_n5_002",
+    "pattern": "～じゃないです",
+    "titleZh": "判断句（否定）",
+    "titleEn": "Copula (negative)",
+    "structure": "A は B じゃないです / ではありません",
+    "explanationZh": "表示'A不是B'，是です的否定形式。",
+    "explanationEn": "Means 'A is not B'. Negative form of です.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "私は先生じゃないです。", "reading": "わたしはせんせいじゃないです。", "meaningZh": "我不是老师。", "meaningEn": "I am not a teacher." },
+      { "japanese": "これは猫じゃないです。", "reading": "これはねこじゃないです。", "meaningZh": "这不是猫。", "meaningEn": "This is not a cat." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "これは本___。", "answer": "じゃないです", "explanation": "じゃないです是です的否定形式" }
+    ]
+  },
+  {
+    "id": "grammar_n5_003",
+    "pattern": "～ます",
+    "titleZh": "动词敬体（肯定）",
+    "titleEn": "Polite verb form (affirmative)",
+    "structure": "动词ます形",
+    "explanationZh": "动词的礼貌肯定形式，用于正式场合和日常对话。",
+    "explanationEn": "Polite affirmative form of verbs, used in formal situations and daily conversation.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "毎日勉強します。", "reading": "まいにちべんきょうします。", "meaningZh": "每天学习。", "meaningEn": "I study every day." },
+      { "japanese": "朝ご飯を食べます。", "reading": "あさごはんをたべます。", "meaningZh": "吃早饭。", "meaningEn": "I eat breakfast." }
+    ],
+    "exercises": [
+      { "type": "multiple_choice", "question": "「读」的ます形是？", "options": ["読みます", "読ます", "読います", "読します"], "correctIndex": 0 }
+    ]
+  },
+  {
+    "id": "grammar_n5_004",
+    "pattern": "～ません",
+    "titleZh": "动词敬体（否定）",
+    "titleEn": "Polite verb form (negative)",
+    "structure": "动词ます形 → ません",
+    "explanationZh": "动词的礼貌否定形式，将ます替换为ません。",
+    "explanationEn": "Polite negative form. Replace ます with ません.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "今日は勉強しません。", "reading": "きょうはべんきょうしません。", "meaningZh": "今天不学习。", "meaningEn": "I will not study today." },
+      { "japanese": "肉を食べません。", "reading": "にくをたべません。", "meaningZh": "不吃肉。", "meaningEn": "I don't eat meat." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "コーヒーを飲み___。", "answer": "ません", "explanation": "ません是ます的否定形式" }
+    ]
+  },
+  {
+    "id": "grammar_n5_005",
+    "pattern": "～ました",
+    "titleZh": "动词敬体（过去肯定）",
+    "titleEn": "Polite verb form (past affirmative)",
+    "structure": "动词ます形 → ました",
+    "explanationZh": "动词的礼貌过去肯定形式，将ます替换为ました。",
+    "explanationEn": "Polite past affirmative form. Replace ます with ました.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "昨日映画を見ました。", "reading": "きのうえいがをみました。", "meaningZh": "昨天看了电影。", "meaningEn": "I watched a movie yesterday." },
+      { "japanese": "日本に行きました。", "reading": "にほんにいきました。", "meaningZh": "去了日本。", "meaningEn": "I went to Japan." }
+    ],
+    "exercises": [
+      { "type": "multiple_choice", "question": "「昨天吃了寿司」的日语是？", "options": ["昨日寿司を食べました", "昨日寿司を食べます", "昨日寿司を食べません", "昨日寿司を食べませんでした"], "correctIndex": 0 }
+    ]
+  },
+  {
+    "id": "grammar_n5_006",
+    "pattern": "～ませんでした",
+    "titleZh": "动词敬体（过去否定）",
+    "titleEn": "Polite verb form (past negative)",
+    "structure": "动词ます形 → ませんでした",
+    "explanationZh": "动词的礼貌过去否定形式，将ます替换为ませんでした。",
+    "explanationEn": "Polite past negative form. Replace ます with ませんでした.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "昨日勉強しませんでした。", "reading": "きのうべんきょうしませんでした。", "meaningZh": "昨天没学习。", "meaningEn": "I didn't study yesterday." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "昨日テレビを見___。", "answer": "ませんでした", "explanation": "ませんでした是ます的过去否定形式" }
+    ]
+  },
+  {
+    "id": "grammar_n5_007",
+    "pattern": "～て form",
+    "titleZh": "动词て形",
+    "titleEn": "Te-form of verbs",
+    "structure": "动词て形",
+    "explanationZh": "动词的连接形式，用于连接多个动作、请求等。五段动词根据词尾变化：く→いて、ぐ→いで、す→して等。",
+    "explanationEn": "Connective form used for linking actions, requests, etc.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "朝起きて、ご飯を食べて、学校に行きます。", "reading": "あさおきて、ごはんをたべて、がっこうにいきます。", "meaningZh": "早上起床，吃饭，去学校。", "meaningEn": "I wake up, eat, and go to school." },
+      { "japanese": "ここに座ってください。", "reading": "ここにすわってください。", "meaningZh": "请坐在这里。", "meaningEn": "Please sit here." }
+    ],
+    "exercises": [
+      { "type": "multiple_choice", "question": "「書く」的て形是？", "options": ["書いて", "書って", "書して", "書きて"], "correctIndex": 0 }
+    ]
+  },
+  {
+    "id": "grammar_n5_008",
+    "pattern": "～ている",
+    "titleZh": "正在进行/状态持续",
+    "titleEn": "Continuous/State",
+    "structure": "动词て形 + いる/います",
+    "explanationZh": "表示正在进行的动作或持续的状态。",
+    "explanationEn": "Expresses ongoing actions or continuous states.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "本を読んでいます。", "reading": "ほんをよんでいます。", "meaningZh": "正在读书。", "meaningEn": "I am reading a book." },
+      { "japanese": "東京に住んでいます。", "reading": "とうきょうにすんでいます。", "meaningZh": "住在东京。", "meaningEn": "I live in Tokyo." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "今、音楽を聞い___。", "answer": "ています", "explanation": "ています表示正在进行" }
+    ]
+  },
+  {
+    "id": "grammar_n5_009",
+    "pattern": "～たい",
+    "titleZh": "想要做某事",
+    "titleEn": "Want to do",
+    "structure": "动词ます形去掉ます + たい",
+    "explanationZh": "表示说话者想要做某事。只用于第一人称。",
+    "explanationEn": "Expresses the speaker's desire to do something. Only for first person.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "日本に行きたいです。", "reading": "にほんにいきたいです。", "meaningZh": "想去日本。", "meaningEn": "I want to go to Japan." },
+      { "japanese": "水が飲みたい。", "reading": "みずがのみたい。", "meaningZh": "想喝水。", "meaningEn": "I want to drink water." }
+    ],
+    "exercises": [
+      { "type": "multiple_choice", "question": "「想吃寿司」的日语是？", "options": ["寿司が食べたい", "寿司を食べたい", "寿司が食べます", "寿司を食べる"], "correctIndex": 0 }
+    ]
+  },
+  {
+    "id": "grammar_n5_010",
+    "pattern": "～に行く",
+    "titleZh": "去做某事",
+    "titleEn": "Go to do",
+    "structure": "动词ます形去掉ます + に行く",
+    "explanationZh": "表示去某处做某事。",
+    "explanationEn": "Expresses going somewhere to do something.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "映画を見に行きます。", "reading": "えいがをみにいきます。", "meaningZh": "去看电影。", "meaningEn": "I will go to watch a movie." },
+      { "japanese": "買い物に行く。", "reading": "かいものにいく。", "meaningZh": "去购物。", "meaningEn": "I'll go shopping." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "ご飯を食べ___行きます。", "answer": "に", "explanation": "に表示目的" }
+    ]
+  },
+  {
+    "id": "grammar_n5_011",
+    "pattern": "～から～まで",
+    "titleZh": "从...到...",
+    "titleEn": "From... to...",
+    "structure": "A から B まで",
+    "explanationZh": "表示时间或空间的起点和终点。",
+    "explanationEn": "Indicates the starting and ending point of time or space.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "9時から5時まで働きます。", "reading": "くじからごじまではたらきます。", "meaningZh": "从9点工作到5点。", "meaningEn": "I work from 9 to 5." },
+      { "japanese": "東京から大阪まで新幹線で行く。", "reading": "とうきょうからおおさかまでしんかんせんでいく。", "meaningZh": "从东京到大阪坐新干线。", "meaningEn": "I go from Tokyo to Osaka by bullet train." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "月曜日___金曜日___学校があります。", "answer": "から、まで", "explanation": "から表示起点，まで表示终点" }
+    ]
+  },
+  {
+    "id": "grammar_n5_012",
+    "pattern": "～と思う",
+    "titleZh": "我觉得/我认为",
+    "titleEn": "I think that...",
+    "structure": "普通形 + と思う/思います",
+    "explanationZh": "表示说话者的想法或意见。",
+    "explanationEn": "Expresses the speaker's thoughts or opinions.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "明日は雨だと思います。", "reading": "あしたはあめだとおもいます。", "meaningZh": "我觉得明天会下雨。", "meaningEn": "I think it will rain tomorrow." },
+      { "japanese": "この本は面白いと思う。", "reading": "このほんはおもしろいとおもう。", "meaningZh": "我觉得这本书很有趣。", "meaningEn": "I think this book is interesting." }
+    ],
+    "exercises": [
+      { "type": "multiple_choice", "question": "「我觉得日语很难」的日语是？", "options": ["日本語は難しいと思います", "日本語は難しいを思います", "日本語は難しいに思います", "日本語は難しいで思います"], "correctIndex": 0 }
+    ]
+  },
+  {
+    "id": "grammar_n5_013",
+    "pattern": "～ことができる",
+    "titleZh": "能够做某事",
+    "titleEn": "Can do / Be able to",
+    "structure": "动词辞书形 + ことができる",
+    "explanationZh": "表示有能力做某事。",
+    "explanationEn": "Expresses ability to do something.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "日本語を話すことができます。", "reading": "にほんごをはなすことができます。", "meaningZh": "能说日语。", "meaningEn": "I can speak Japanese." },
+      { "japanese": "漢字を読むことができる。", "reading": "かんじをよむことができる。", "meaningZh": "能读汉字。", "meaningEn": "I can read kanji." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "泳ぐ___ができますか。", "answer": "こと", "explanation": "ことができる表示能力" }
+    ]
+  },
+  {
+    "id": "grammar_n5_014",
+    "pattern": "～なければならない",
+    "titleZh": "必须做某事",
+    "titleEn": "Must do / Have to",
+    "structure": "动词ない形去掉ない + なければならない",
+    "explanationZh": "表示义务或必须做某事。",
+    "explanationEn": "Expresses obligation or necessity.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "宿題をしなければなりません。", "reading": "しゅくだいをしなければなりません。", "meaningZh": "必须做作业。", "meaningEn": "I have to do homework." },
+      { "japanese": "薬を飲まなければならない。", "reading": "くすりをのまなければならない。", "meaningZh": "必须吃药。", "meaningEn": "I have to take medicine." }
+    ],
+    "exercises": [
+      { "type": "multiple_choice", "question": "「必须早起」的日语是？", "options": ["早く起きなければなりません", "早く起きてはいけません", "早く起きてもいいです", "早く起きないでください"], "correctIndex": 0 }
+    ]
+  },
+  {
+    "id": "grammar_n5_015",
+    "pattern": "～てもいい",
+    "titleZh": "可以做某事",
+    "titleEn": "May / Is allowed to",
+    "structure": "动词て形 + もいいです",
+    "explanationZh": "表示许可，允许做某事。",
+    "explanationEn": "Expresses permission to do something.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "写真を撮ってもいいですか。", "reading": "しゃしんをとってもいいですか。", "meaningZh": "可以拍照吗？", "meaningEn": "May I take a photo?" },
+      { "japanese": "ここに座ってもいいですよ。", "reading": "ここにすわってもいいですよ。", "meaningZh": "可以坐在这里。", "meaningEn": "You may sit here." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "ここで食べ___いいですか。", "answer": "ても", "explanation": "てもいい表示许可" }
+    ]
+  },
+  {
+    "id": "grammar_n5_016",
+    "pattern": "～ないでください",
+    "titleZh": "请不要做某事",
+    "titleEn": "Please don't",
+    "structure": "动词ない形 + でください",
+    "explanationZh": "表示请求对方不要做某事。",
+    "explanationEn": "Polite request to not do something.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "ここで写真を撮らないでください。", "reading": "ここでしゃしんをとらないでください。", "meaningZh": "请不要在这里拍照。", "meaningEn": "Please don't take photos here." },
+      { "japanese": "遅れないでください。", "reading": "おくれないでください。", "meaningZh": "请不要迟到。", "meaningEn": "Please don't be late." }
+    ],
+    "exercises": [
+      { "type": "multiple_choice", "question": "「请不要说话」的日语是？", "options": ["話さないでください", "話してください", "話しませんでください", "話さなくてください"], "correctIndex": 0 }
+    ]
+  },
+  {
+    "id": "grammar_n5_017",
+    "pattern": "～たことがある",
+    "titleZh": "曾经做过某事",
+    "titleEn": "Have done before",
+    "structure": "动词た形 + ことがある",
+    "explanationZh": "表示过去的经历。",
+    "explanationEn": "Expresses past experience.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "日本に行ったことがあります。", "reading": "にほんにいったことがあります。", "meaningZh": "去过日本。", "meaningEn": "I have been to Japan." },
+      { "japanese": "寿司を食べたことがある。", "reading": "すしをたべたことがある。", "meaningZh": "吃过寿司。", "meaningEn": "I have eaten sushi before." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "富士山に登っ___ことがありますか。", "answer": "た", "explanation": "た形+ことがある表示经历" }
+    ]
+  },
+  {
+    "id": "grammar_n5_018",
+    "pattern": "～つもり",
+    "titleZh": "打算做某事",
+    "titleEn": "Intend to",
+    "structure": "动词辞书形 + つもりです",
+    "explanationZh": "表示说话者的意图或计划。",
+    "explanationEn": "Expresses the speaker's intention or plan.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "来年日本に行くつもりです。", "reading": "らいねんにほんにいくつもりです。", "meaningZh": "打算明年去日本。", "meaningEn": "I intend to go to Japan next year." },
+      { "japanese": "週末は勉強するつもりだ。", "reading": "しゅうまつはべんきょうするつもりだ。", "meaningZh": "打算周末学习。", "meaningEn": "I plan to study on the weekend." }
+    ],
+    "exercises": [
+      { "type": "multiple_choice", "question": "「打算买新电脑」的日语是？", "options": ["新しいパソコンを買うつもりです", "新しいパソコンを買いたいです", "新しいパソコンを買ってもいいです", "新しいパソコンを買わなければなりません"], "correctIndex": 0 }
+    ]
+  },
+  {
+    "id": "grammar_n5_019",
+    "pattern": "～ほうがいい",
+    "titleZh": "最好做某事",
+    "titleEn": "Had better / Should",
+    "structure": "动词た形 + ほうがいい / 动词ない形 + ほうがいい",
+    "explanationZh": "表示建议。肯定用た形，否定用ない形。",
+    "explanationEn": "Gives advice. Use た form for positive, ない form for negative.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "薬を飲んだほうがいいですよ。", "reading": "くすりをのんだほうがいいですよ。", "meaningZh": "最好吃药。", "meaningEn": "You'd better take medicine." },
+      { "japanese": "夜遅く食べないほうがいい。", "reading": "よるおそくたべないほうがいい。", "meaningZh": "最好不要晚上吃太晚。", "meaningEn": "You'd better not eat late at night." }
+    ],
+    "exercises": [
+      { "type": "fill_blank", "question": "早く寝___ほうがいいですよ。", "answer": "た", "explanation": "た形+ほうがいい表示肯定建议" }
+    ]
+  },
+  {
+    "id": "grammar_n5_020",
+    "pattern": "～そうだ",
+    "titleZh": "看起来/好像",
+    "titleEn": "Looks like / Seems",
+    "structure": "い形容词去い + そうだ / な形容词 + そうだ / 动词ます形去ます + そうだ",
+    "explanationZh": "表示根据外观推测。",
+    "explanationEn": "Expresses conjecture based on appearance.",
+    "jlptLevel": "N5",
+    "examples": [
+      { "japanese": "この料理はおいしそうです。", "reading": "このりょうりはおいしそうです。", "meaningZh": "这道菜看起来很好吃。", "meaningEn": "This dish looks delicious." },
+      { "japanese": "雨が降りそうだ。", "reading": "あめがふりそうだ。", "meaningZh": "好像要下雨了。", "meaningEn": "It looks like it's going to rain." }
+    ],
+    "exercises": [
+      { "type": "multiple_choice", "question": "「看起来很难」的日语是？", "options": ["難しそうです", "難しいそうです", "難しくそうです", "難しそうだです"], "correctIndex": 0 }
+    ]
+  }
+]

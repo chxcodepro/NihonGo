@@ -127,10 +127,14 @@ jp-study/
 ├── apps/
 │   ├── web/                    # Next.js 15 Web应用
 │   │   ├── app/                # App Router
-│   │   │   ├── (auth)/         # 认证相关页面
-│   │   │   ├── (learn)/        # 学习模块
-│   │   │   ├── (game)/         # 游戏模块
-│   │   │   ├── (settings)/     # 设置页
+│   │   │   ├── login/          # 登录页
+│   │   │   ├── register/       # 注册页
+│   │   │   ├── callback/       # OAuth回调
+│   │   │   ├── learn/          # 学习模块
+│   │   │   ├── game/           # 游戏模块
+│   │   │   ├── settings/       # 设置页
+│   │   │   ├── ai-chat/        # AI对话
+│   │   │   ├── profile/        # 个人中心
 │   │   │   └── api/            # BFF层（可选）
 │   │   ├── components/         # Web专用组件
 │   │   └── public/             # 静态资源

@@ -1,0 +1,12 @@
+{
+  "name": "@repo/question-bank",
+  "version": "0.1.0",
+  "private": true,
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "exports": {
+    ".": "./index.ts",
+    "./modules/*": "./modules/*",
+    "./games/*": "./games/*"
+  }
+}

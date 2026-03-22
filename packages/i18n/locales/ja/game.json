@@ -1,0 +1,29 @@
+{
+  "title": "ゲームセンター",
+  "typing_race": {
+    "title": "タイピングレース",
+    "description": "AIとタイピングスピードを競おう",
+    "difficulty": "難易度選択",
+    "opponent": "対戦相手を選ぶ",
+    "start": "レース開始",
+    "you": "あなた",
+    "ai": "AI",
+    "wpm": "WPM",
+    "accuracy": "正確率",
+    "result": { "win": "あなたの勝ち！", "lose": "AIの勝ち", "draw": "引き分け" },
+    "play_again": "もう一回"
+  },
+  "sokoban": {
+    "title": "文法倉庫番",
+    "description": "倉庫番で文法を学ぼう",
+    "level": "ステージ {level}",
+    "moves": "手数",
+    "reset": "リセット",
+    "hint": "ヒント",
+    "correct": "正解！",
+    "incorrect": "不正解、箱が戻りました",
+    "complete": "クリア！",
+    "stars": "{count} スター",
+    "next_level": "次のステージ"
+  }
+}

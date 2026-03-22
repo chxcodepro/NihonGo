@@ -1,0 +1,187 @@
+@import 'tailwindcss';
+
+@theme {
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+  --color-destructive: hsl(var(--destructive));
+  --color-destructive-foreground: hsl(var(--destructive-foreground));
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+  --color-popover: hsl(var(--popover));
+  --color-popover-foreground: hsl(var(--popover-foreground));
+  --font-sans: 'Urbanist', 'Noto Sans SC', system-ui, sans-serif;
+  --font-jp: 'Noto Sans JP', 'Hiragino Kaku Gothic Pro', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Fira Code', monospace;
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+:root {
+  --radius: 0.625rem;
+
+  /* Light — 暖奶白底 + 樱色主调 */
+  --background: 30 33% 98%;
+  --foreground: 240 20% 12%;
+  --card: 30 25% 99%;
+  --card-foreground: 240 20% 12%;
+  --popover: 0 0% 100%;
+  --popover-foreground: 240 20% 12%;
+  --primary: 346 78% 52%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 30 20% 94%;
+  --secondary-foreground: 240 15% 20%;
+  --muted: 30 15% 94%;
+  --muted-foreground: 240 8% 46%;
+  --accent: 346 60% 95%;
+  --accent-foreground: 346 78% 40%;
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 0 0% 100%;
+  --border: 30 15% 90%;
+  --input: 30 15% 90%;
+  --ring: 346 78% 52%;
+
+  /* Brand colors - Light */
+  --sakura: #DC2E5A;
+  --sakura-light: #FFF0F3;
+  --indigo: #4F6DF5;
+  --indigo-light: #EEF1FE;
+  --emerald: #10B981;
+  --emerald-light: #ECFDF5;
+  --amber: #F59E0B;
+  --amber-light: #FFFBEB;
+  --coral: #F43F5E;
+  --coral-light: #FFF1F2;
+}
+
+.dark {
+  /* 深靛蓝底 */
+  --background: 230 25% 7%;
+  --foreground: 30 20% 92%;
+  --card: 230 22% 10%;
+  --card-foreground: 30 20% 92%;
+  --popover: 230 22% 10%;
+  --popover-foreground: 30 20% 92%;
+  --primary: 346 75% 58%;
+  --primary-foreground: 0 0% 100%;
+  --secondary: 230 18% 15%;
+  --secondary-foreground: 30 20% 90%;
+  --muted: 230 18% 15%;
+  --muted-foreground: 230 12% 55%;
+  --accent: 346 40% 18%;
+  --accent-foreground: 346 75% 70%;
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+  --border: 230 18% 16%;
+  --input: 230 18% 16%;
+  --ring: 346 75% 58%;
+
+  /* Brand colors - Dark */
+  --sakura: #E8527A;
+  --sakura-light: #3D1525;
+  --indigo: #818CF8;
+  --indigo-light: #1E1B4B;
+  --emerald: #34D399;
+  --emerald-light: #052E16;
+  --amber: #FBBF24;
+  --amber-light: #422006;
+  --coral: #FB7185;
+  --coral-light: #4C0519;
+}
+
+/* ===== 自定义动画 ===== */
+@keyframes float {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.08; }
+  50% { transform: translateY(-20px) rotate(5deg); opacity: 0.15; }
+}
+@keyframes float-reverse {
+  0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.06; }
+  50% { transform: translateY(15px) rotate(-4deg); opacity: 0.12; }
+}
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+@keyframes pulse-glow {
+  0%, 100% { box-shadow: 0 0 20px hsl(346 78% 52% / 0); }
+  50% { box-shadow: 0 0 30px hsl(346 78% 52% / 0.15); }
+}
+@keyframes grain {
+  0%, 100% { transform: translate(0, 0); }
+  10% { transform: translate(-2%, -2%); }
+  30% { transform: translate(1%, -1%); }
+  50% { transform: translate(-1%, 2%); }
+  70% { transform: translate(2%, 1%); }
+  90% { transform: translate(-1%, -1%); }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+}
+
+/* ===== 工具类 ===== */
+.glass {
+  background: hsl(var(--card) / 0.6);
+  backdrop-filter: blur(16px) saturate(1.4);
+  -webkit-backdrop-filter: blur(16px) saturate(1.4);
+  border: 1px solid hsl(var(--border) / 0.5);
+}
+.dark .glass {
+  background: hsl(var(--card) / 0.4);
+  border-color: hsl(var(--border) / 0.3);
+}
+
+.animate-float { animation: float 6s ease-in-out infinite; }
+.animate-float-reverse { animation: float-reverse 7s ease-in-out infinite; }
+.animate-shimmer {
+  background-size: 200% 100%;
+  animation: shimmer 3s linear infinite;
+}
+.animate-pulse-glow { animation: pulse-glow 3s ease-in-out infinite; }
+
+/* 噪点纹理叠层 */
+.grain-overlay::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0.03;
+  pointer-events: none;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-repeat: repeat;
+  background-size: 256px 256px;
+  animation: grain 8s steps(10) infinite;
+}
+.dark .grain-overlay::before {
+  opacity: 0.05;
+}
+
+/* 渐变网格背景 */
+.hero-gradient {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, hsl(346 78% 52% / 0.08) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 20%, hsl(30 80% 60% / 0.06) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 20% 60%, hsl(240 60% 60% / 0.04) 0%, transparent 50%);
+}
+.dark .hero-gradient {
+  background:
+    radial-gradient(ellipse 80% 60% at 50% 0%, hsl(346 75% 58% / 0.12) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 50% at 80% 20%, hsl(270 50% 50% / 0.08) 0%, transparent 50%),
+    radial-gradient(ellipse 50% 40% at 20% 60%, hsl(200 60% 50% / 0.05) 0%, transparent 50%);
+}
