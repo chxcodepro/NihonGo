@@ -20,7 +20,7 @@ export function LocaleSwitcher() {
   }
 
   return (
-    <Button variant="ghost" size="icon" onClick={next} className="w-9 text-sm font-medium" title={`当前: ${localeLabels[locale]}`}>
+    <Button variant="ghost" size="icon" onClick={next} className="h-10 w-10 text-sm font-medium hover:bg-primary/15 dark:hover:bg-primary/20" title={`当前: ${localeLabels[locale]}`}>
       {localeLabels[locale]}
       <span className="sr-only">切换语言</span>
     </Button>

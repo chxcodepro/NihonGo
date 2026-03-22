@@ -45,21 +45,20 @@ function isNavItemActive(
   return pathname === href || pathname.startsWith(`${href}/`)
 }
 
-export function Navbar() {
+export function Navbar({ transparent = false }: { transparent?: boolean }) {
   const pathname = usePathname()
   const { isLoggedIn, user, logout } = useAuthStore()
   const [sheetOpen, setSheetOpen] = useState(false)
   const { t } = useTranslation('nav')
 
-  const navLinks = [
-    { href: '/learn', label: t('learn'), excludeHrefs: ['/learn/typing'] },
-    { href: '/learn/typing', label: t('typing') },
-    { href: '/game', label: t('games') },
-  ]
+  const navLinks: { href: string; label: string; excludeHrefs?: string[] }[] = []
 
   return (
-    <header className="sticky top-0 z-50 w-full glass border-b border-border/40">
-      <div className="container mx-auto flex h-16 items-center justify-between px-4">
+    <header className={transparent
+      ? 'sticky top-0 z-50 w-full bg-white/30 backdrop-blur-lg dark:bg-transparent dark:backdrop-blur-md'
+      : 'sticky top-0 z-50 w-full glass border-b border-border/40'}
+    >
+      <div className="container relative z-10 mx-auto flex h-16 items-center justify-between px-4">
         <div className="flex items-center gap-8 min-w-0">
           <Link href="/" className="group flex items-center gap-2">
             <span className="flex h-8 w-8 items-center justify-center rounded-lg bg-primary text-primary-foreground text-sm font-bold transition-transform group-hover:scale-110">
@@ -130,7 +129,12 @@ export function Navbar() {
               </DropdownMenuContent>
             </DropdownMenu>
           ) : (
-            <Button variant="ghost" size="sm" asChild className="hidden md:inline-flex w-24 justify-center shrink-0">
+            <Button
+              variant="ghost"
+              size="sm"
+              asChild
+              className="hidden w-24 shrink-0 justify-center md:inline-flex hover:bg-primary/15 dark:hover:bg-primary/20"
+            >
               <Link href="/login">
                 <LogIn className="mr-2 h-4 w-4" />
                 {t('login')}
