@@ -4,6 +4,7 @@ import { useRef, useEffect, useCallback } from 'react'
 import { Card, CardContent, Input } from '@repo/ui'
 import { useTypingStore } from '@repo/shared/store/typingStore'
 import type { TypingResult } from '@repo/shared'
+import { useTranslation } from '@/hooks/useTranslation'
 
 interface TypingPracticeProps {
   text: string
@@ -11,6 +12,7 @@ interface TypingPracticeProps {
 }
 
 export function TypingPractice({ text, onComplete }: TypingPracticeProps) {
+  const { t } = useTranslation('learn')
   const inputRef = useRef<HTMLInputElement>(null)
   const { userInput, updateInput, finishPractice, wpm, accuracy, errors, startTime } = useTypingStore()
 
@@ -58,7 +60,7 @@ export function TypingPractice({ text, onComplete }: TypingPracticeProps) {
           ref={inputRef}
           value={userInput}
           onChange={handleChange}
-          placeholder="在此输入..."
+          placeholder={t('typing.input_placeholder')}
           className="text-xl font-mono"
           autoComplete="off"
           autoCorrect="off"
@@ -66,8 +68,8 @@ export function TypingPractice({ text, onComplete }: TypingPracticeProps) {
         />
 
         <div className="flex items-center justify-between text-sm text-muted-foreground">
-          <span>已输入 {userInput.length} / {text.length} 字符</span>
-          <span>错误 {errors} 个</span>
+          <span>{t('typing.typed_label')} {userInput.length} / {text.length}</span>
+          <span>{t('typing.errors_label')} {errors}</span>
         </div>
       </CardContent>
     </Card>

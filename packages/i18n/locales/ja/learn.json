@@ -1,11 +1,16 @@
 {
   "title": "学習センター",
+  "subtitle": "ゼロから日本語を体系的に学ぼう",
   "overview": "学習概要",
   "daily_goal": "一日の目標",
   "progress": "学習進捗",
   "recent": "最近の学習",
+  "mastered_kana": "習得したかな数",
+  "recent_empty": "最初の学習を始めましょう！",
+  "recent_action": "五十音から始める",
   "kana": {
     "title": "五十音図",
+    "subtitle": "日本語の発音の基礎を身につけよう",
     "hiragana": "ひらがな",
     "katakana": "カタカナ",
     "all": "すべて",
@@ -13,13 +18,20 @@
     "stroke_order": "書き順",
     "examples": "例語",
     "quiz": "クイズ",
+    "start_quiz": "クイズ開始",
+    "quiz_title": "かなクイズ",
     "mastered": "習得済み",
-    "learning": "学習中"
+    "learning": "学習中",
+    "detail_hint": "かなをクリックして詳細を表示",
+    "pronounce": "発音",
+    "mark_mastered": "習得済みにする"
   },
   "vocabulary": {
     "title": "語彙学習",
+    "subtitle": "JLPTレベル別に日本語の語彙を学ぼう",
     "browse": "閲覧モード",
     "review": "復習モード",
+    "coming_soon": "近日公開",
     "level_filter": "レベル選択",
     "word": "単語",
     "reading": "読み",
@@ -30,10 +42,19 @@
     "good": "覚えた",
     "easy": "簡単",
     "cards_remaining": "残り {count} 枚",
-    "review_complete": "今日の復習完了！"
+    "review_complete": "今日の復習完了！",
+    "search_placeholder": "語彙を検索（日本語・ローマ字・中国語）",
+    "empty_search": "一致する語彙が見つかりません",
+    "total_suffix": "語",
+    "review_again": "もう一度復習する",
+    "card_label": "カード",
+    "flip_hint": "カードを押して意味を表示"
   },
   "grammar": {
     "title": "文法学習",
+    "subtitle": "日本語文法を体系的に学ぼう",
+    "lesson_list": "N5 文法項目",
+    "empty": "文法項目を選んで学習を始めましょう",
     "structure": "文型構造",
     "explanation": "文法解説",
     "examples": "例文",
@@ -46,23 +67,46 @@
       "correct": "正解！",
       "incorrect": "不正解",
       "check": "答えを確認",
-      "next": "次の問題"
+      "next": "次の問題",
+      "empty": "練習問題はまだありません",
+      "question": "問題",
+      "fill_placeholder": "正しい文法表現を入力してください",
+      "reorder_hint": "下の語を押して文を並べてください"
     }
   },
   "typing": {
     "title": "タイピング練習",
+    "subtitle": "日本語入力の速さと正確さを上げよう",
+    "mode_label": "モード",
+    "difficulty_label": "難易度",
+    "ready_title": "準備はいいですか？",
+    "ready_description": "モードと難易度を選んで「練習開始」を押してください",
+    "live_stats": "リアルタイムデータ",
+    "speed": "速度",
+    "average_wpm": "平均 WPM",
+    "total_sessions": "総練習回数",
+    "recent_results": "最近の成績",
     "mode": {
+      "hiragana_input": "ひらがな入力",
+      "katakana_input": "カタカナ入力",
       "kana_to_romaji": "かな→ローマ字",
       "romaji_to_kana": "ローマ字→かな",
       "word": "単語モード",
       "sentence": "文章モード"
     },
-    "difficulty": { "easy": "初級", "medium": "中級", "hard": "上級" },
+    "difficulty": {
+      "easy": "初級",
+      "medium": "中級",
+      "hard": "上級"
+    },
     "wpm": "WPM",
     "accuracy": "正確率",
     "time": "時間",
     "start": "練習開始",
     "restart": "やり直す",
-    "complete": "練習完了！"
+    "complete": "練習完了！",
+    "input_placeholder": "ここに入力...",
+    "typed_label": "入力済み",
+    "errors_label": "ミス"
   }
 }

@@ -6,12 +6,14 @@ import type { VocabItem, JlptLevel } from '@repo/shared'
 import { vocabN5Data } from '@repo/question-bank'
 import { VocabCard } from './VocabCard'
 import { Search } from 'lucide-react'
+import { useTranslation } from '@/hooks/useTranslation'
 
 interface VocabListProps {
   level: JlptLevel
 }
 
 export function VocabList({ level }: VocabListProps) {
+  const { t } = useTranslation('learn')
   const [search, setSearch] = useState('')
   const [flippedId, setFlippedId] = useState<string | null>(null)
 
@@ -34,7 +36,7 @@ export function VocabList({ level }: VocabListProps) {
       <div className="relative max-w-sm">
         <Search className="absolute left-3 top-1/2 h-4 w-4 -translate-y-1/2 text-muted-foreground" />
         <Input
-          placeholder="搜索词汇（日语、罗马音或中文）"
+          placeholder={t('vocabulary.search_placeholder')}
           value={search}
           onChange={(e) => setSearch(e.target.value)}
           className="pl-9"
@@ -43,7 +45,7 @@ export function VocabList({ level }: VocabListProps) {
 
       {filtered.length === 0 ? (
         <div className="py-12 text-center text-muted-foreground">
-          没有找到匹配的词汇
+          {t('vocabulary.empty_search')}
         </div>
       ) : (
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
@@ -60,7 +62,7 @@ export function VocabList({ level }: VocabListProps) {
       )}
 
       <p className="text-center text-sm text-muted-foreground">
-        共 {filtered.length} 个词汇
+        {filtered.length} {t('vocabulary.total_suffix')}
       </p>
     </div>
   )

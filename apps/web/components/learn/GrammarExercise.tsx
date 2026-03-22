@@ -6,6 +6,7 @@ import { Card, CardContent, Button, Input, Badge } from '@repo/ui'
 import { grammarN5Data } from '@repo/question-bank'
 import type { GrammarItem } from '@repo/shared'
 import { CheckCircle2, XCircle, ArrowRight } from 'lucide-react'
+import { useTranslation } from '@/hooks/useTranslation'
 
 interface GrammarExerciseProps {
   grammarId: string
@@ -60,6 +61,7 @@ function generateExercises(grammarId: string): Exercise[] {
 }
 
 export function GrammarExercise({ grammarId }: GrammarExerciseProps) {
+  const { t } = useTranslation('learn')
   const exercises = useMemo(() => generateExercises(grammarId), [grammarId])
   const [idx, setIdx] = useState(0)
   const [answered, setAnswered] = useState(false)
@@ -84,7 +86,7 @@ export function GrammarExercise({ grammarId }: GrammarExerciseProps) {
     return (
       <Card>
         <CardContent className="py-8 text-center text-muted-foreground">
-          暂无练习题
+          {t('grammar.exercise.empty')}
         </CardContent>
       </Card>
     )
@@ -124,9 +126,9 @@ export function GrammarExercise({ grammarId }: GrammarExerciseProps) {
     <Card>
       <CardContent className="space-y-6 p-6">
         <div className="flex items-center justify-between">
-          <h3 className="font-medium">语法练习</h3>
+          <h3 className="font-medium">{t('grammar.practice')}</h3>
           <span className="text-sm text-muted-foreground">
-            第 {idx + 1} / {exercises.length} 题
+            {t('grammar.exercise.question')} {idx + 1} / {exercises.length}
           </span>
         </div>
 
@@ -159,7 +161,7 @@ export function GrammarExercise({ grammarId }: GrammarExerciseProps) {
             <Input
               value={userAnswer}
               onChange={(e) => setUserAnswer(e.target.value)}
-              placeholder="填入正确的语法表达"
+              placeholder={t('grammar.exercise.fill_placeholder')}
               className="font-jp text-lg"
               disabled={answered}
             />
@@ -181,7 +183,7 @@ export function GrammarExercise({ grammarId }: GrammarExerciseProps) {
                   ))}
                 </div>
                 {orderedWords.length === 0 && (
-                  <p className="text-sm text-muted-foreground">点击下方词语排列成句</p>
+                  <p className="text-sm text-muted-foreground">{t('grammar.exercise.reorder_hint')}</p>
                 )}
               </div>
               <div className="flex flex-wrap gap-2">
@@ -212,7 +214,7 @@ export function GrammarExercise({ grammarId }: GrammarExerciseProps) {
           >
             {isCorrect ? <CheckCircle2 className="mt-0.5 h-5 w-5 shrink-0" /> : <XCircle className="mt-0.5 h-5 w-5 shrink-0" />}
             <div>
-              <p className="font-medium">{isCorrect ? '回答正确！' : '回答错误'}</p>
+              <p className="font-medium">{isCorrect ? t('grammar.exercise.correct') : t('grammar.exercise.incorrect')}</p>
               <p className="mt-1 text-sm opacity-80">{current.explanation}</p>
             </div>
           </motion.div>
@@ -221,15 +223,15 @@ export function GrammarExercise({ grammarId }: GrammarExerciseProps) {
         <div className="flex justify-end gap-3">
           {!answered ? (
             <Button onClick={checkAnswer} disabled={!userAnswer && orderedWords.length === 0}>
-              检查答案
+              {t('grammar.exercise.check')}
             </Button>
           ) : idx + 1 < exercises.length ? (
             <Button onClick={handleNext}>
-              下一题 <ArrowRight className="ml-1 h-4 w-4" />
+              {t('grammar.exercise.next')} <ArrowRight className="ml-1 h-4 w-4" />
             </Button>
           ) : (
             <Button variant="outline" onClick={handleReset}>
-              重新开始
+              {t('typing.restart')}
             </Button>
           )}
         </div>

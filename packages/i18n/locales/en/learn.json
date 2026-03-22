@@ -1,11 +1,16 @@
 {
   "title": "Learning Center",
+  "subtitle": "Learn Japanese step by step from zero",
   "overview": "Overview",
   "daily_goal": "Daily Goal",
   "progress": "Progress",
   "recent": "Recent",
+  "mastered_kana": "Mastered Kana",
+  "recent_empty": "Start your first lesson today!",
+  "recent_action": "Start with Kana",
   "kana": {
     "title": "Kana Chart",
+    "subtitle": "Master the basics of Japanese pronunciation",
     "hiragana": "Hiragana",
     "katakana": "Katakana",
     "all": "All",
@@ -13,13 +18,20 @@
     "stroke_order": "Stroke Order",
     "examples": "Examples",
     "quiz": "Quiz",
+    "start_quiz": "Start Quiz",
+    "quiz_title": "Kana Quiz",
     "mastered": "Mastered",
-    "learning": "Learning"
+    "learning": "Learning",
+    "detail_hint": "Click a kana to view details",
+    "pronounce": "Pronounce",
+    "mark_mastered": "Mark as Mastered"
   },
   "vocabulary": {
     "title": "Vocabulary",
+    "subtitle": "Learn core Japanese vocabulary by JLPT level",
     "browse": "Browse",
     "review": "Review",
+    "coming_soon": "Coming Soon",
     "level_filter": "Level Filter",
     "word": "Word",
     "reading": "Reading",
@@ -30,10 +42,19 @@
     "good": "Good",
     "easy": "Easy",
     "cards_remaining": "{count} cards remaining",
-    "review_complete": "Review complete for today!"
+    "review_complete": "Review complete for today!",
+    "search_placeholder": "Search vocabulary (Japanese, romaji, or Chinese)",
+    "empty_search": "No matching vocabulary found",
+    "total_suffix": "words",
+    "review_again": "Review Again",
+    "card_label": "Card",
+    "flip_hint": "Tap the card to reveal the meaning"
   },
   "grammar": {
     "title": "Grammar",
+    "subtitle": "Study Japanese grammar in a structured way",
+    "lesson_list": "N5 Grammar Points",
+    "empty": "Choose a grammar point to start learning",
     "structure": "Structure",
     "explanation": "Explanation",
     "examples": "Examples",
@@ -46,23 +67,46 @@
       "correct": "Correct!",
       "incorrect": "Incorrect",
       "check": "Check Answer",
-      "next": "Next"
+      "next": "Next",
+      "empty": "No exercises available yet",
+      "question": "Question",
+      "fill_placeholder": "Enter the correct grammar pattern",
+      "reorder_hint": "Tap the words below to form a sentence"
     }
   },
   "typing": {
     "title": "Typing Practice",
+    "subtitle": "Improve your Japanese typing speed and accuracy",
+    "mode_label": "Mode",
+    "difficulty_label": "Difficulty",
+    "ready_title": "Ready to begin?",
+    "ready_description": "Choose a mode and difficulty, then tap Start",
+    "live_stats": "Live Stats",
+    "speed": "Speed",
+    "average_wpm": "Average WPM",
+    "total_sessions": "Total Sessions",
+    "recent_results": "Recent Results",
     "mode": {
+      "hiragana_input": "Hiragana Input",
+      "katakana_input": "Katakana Input",
       "kana_to_romaji": "Kana to Romaji",
       "romaji_to_kana": "Romaji to Kana",
       "word": "Word Mode",
       "sentence": "Sentence Mode"
     },
-    "difficulty": { "easy": "Easy", "medium": "Medium", "hard": "Hard" },
+    "difficulty": {
+      "easy": "Easy",
+      "medium": "Medium",
+      "hard": "Hard"
+    },
     "wpm": "WPM",
     "accuracy": "Accuracy",
     "time": "Time",
     "start": "Start",
     "restart": "Restart",
-    "complete": "Practice Complete!"
+    "complete": "Practice Complete!",
+    "input_placeholder": "Type here...",
+    "typed_label": "Typed",
+    "errors_label": "Errors"
   }
 }

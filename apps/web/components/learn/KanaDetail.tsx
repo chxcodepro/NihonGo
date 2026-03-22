@@ -4,6 +4,7 @@ import { Card, CardContent, Button, Badge } from '@repo/ui'
 import type { KanaItem } from '@repo/shared'
 import { useLearnStore } from '@repo/shared/store/learnStore'
 import { Volume2, Check } from 'lucide-react'
+import { useTranslation } from '@/hooks/useTranslation'
 
 interface KanaDetailProps {
   kana: KanaItem | null
@@ -11,6 +12,7 @@ interface KanaDetailProps {
 }
 
 export function KanaDetail({ kana, onMastered }: KanaDetailProps) {
+  const { t } = useTranslation('learn')
   const { masteredKana } = useLearnStore()
 
   const handleTTS = () => {
@@ -26,7 +28,7 @@ export function KanaDetail({ kana, onMastered }: KanaDetailProps) {
       <Card>
         <CardContent className="flex flex-col items-center justify-center py-16 text-center text-muted-foreground">
           <p className="text-4xl opacity-20">あ</p>
-          <p className="mt-4">点击假名查看详情</p>
+          <p className="mt-4">{t('kana.detail_hint')}</p>
         </CardContent>
       </Card>
     )
@@ -42,17 +44,17 @@ export function KanaDetail({ kana, onMastered }: KanaDetailProps) {
           <p className="mt-2 text-xl text-muted-foreground">{kana.romaji}</p>
           <Button variant="ghost" size="sm" onClick={handleTTS} className="mt-2">
             <Volume2 className="mr-1 h-4 w-4" />
-            发音
+            {t('kana.pronounce')}
           </Button>
         </div>
 
         <div className="rounded-lg border-2 border-dashed border-muted p-8 text-center text-sm text-muted-foreground">
-          笔顺动画
-          <p className="mt-1 text-xs">（即将推出）</p>
+          {t('kana.stroke_order')}
+          <p className="mt-1 text-xs">（{t('vocabulary.coming_soon')}）</p>
         </div>
 
         <div>
-          <h4 className="mb-2 text-sm font-medium">例词</h4>
+          <h4 className="mb-2 text-sm font-medium">{t('kana.examples')}</h4>
           <div className="space-y-2">
             <div className="rounded-md bg-muted/50 px-3 py-2">
               <span className="font-jp">{kana.char}さ</span>
@@ -73,10 +75,10 @@ export function KanaDetail({ kana, onMastered }: KanaDetailProps) {
           {isMastered ? (
             <>
               <Check className="mr-1 h-4 w-4 text-emerald-500" />
-              已掌握
+              {t('kana.mastered')}
             </>
           ) : (
-            '标记为已掌握'
+            t('kana.mark_mastered')
           )}
         </Button>
       </CardContent>

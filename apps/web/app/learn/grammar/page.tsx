@@ -1,14 +1,16 @@
 'use client'
 
 import { useState, useMemo } from 'react'
-import { Card, CardContent, Badge, Button } from '@repo/ui'
+import { Card, CardContent, Badge } from '@repo/ui'
 import type { GrammarItem } from '@repo/shared'
 import { grammarN5Data } from '@repo/question-bank'
 import { GrammarLesson } from '@/components/learn/GrammarLesson'
 import { GrammarExercise } from '@/components/learn/GrammarExercise'
-import { BookOpen, ChevronRight } from 'lucide-react'
+import { ChevronRight } from 'lucide-react'
+import { useTranslation } from '@/hooks/useTranslation'
 
 export default function GrammarPage() {
+  const { t } = useTranslation('learn')
   const data = grammarN5Data as unknown as GrammarItem[]
   const [selectedId, setSelectedId] = useState<string>(data[0]?.id || '')
 
@@ -17,15 +19,15 @@ export default function GrammarPage() {
   return (
     <div className="mx-auto max-w-6xl">
       <div className="mb-6">
-        <h1 className="text-2xl font-bold">语法课程</h1>
-        <p className="mt-1 text-sm text-muted-foreground">系统学习日语语法结构与用法</p>
+        <h1 className="text-2xl font-bold">{t('grammar.title')}</h1>
+        <p className="mt-1 text-sm text-muted-foreground">{t('grammar.subtitle')}</p>
       </div>
 
       <div className="grid gap-6 lg:grid-cols-[280px_1fr]">
         <div className="hidden lg:block">
           <Card>
             <CardContent className="p-4">
-              <h3 className="mb-3 text-sm font-medium text-muted-foreground">N5 语法点</h3>
+              <h3 className="mb-3 text-sm font-medium text-muted-foreground">{t('grammar.lesson_list')}</h3>
               <div className="space-y-1">
                 {data.map((g) => (
                   <button

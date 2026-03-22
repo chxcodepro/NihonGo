@@ -7,11 +7,31 @@ import { cn } from '@repo/ui'
 
 const tabs = [
   { href: '/', label: '首页', icon: Home },
-  { href: '/learn', label: '学习', icon: BookOpen },
+  { href: '/learn', label: '学习', icon: BookOpen, excludeHrefs: ['/learn/typing'] },
   { href: '/learn/typing', label: '打字', icon: Keyboard },
   { href: '/game', label: '游戏', icon: Gamepad2 },
   { href: '/settings', label: '设置', icon: Settings },
 ]
+
+function isTabActive(
+  pathname: string | null,
+  href: string,
+  options?: { exact?: boolean; excludeHrefs?: string[] }
+) {
+  if (!pathname) return false
+
+  const isExcluded = options?.excludeHrefs?.some((excludedHref) =>
+    pathname === excludedHref || pathname.startsWith(`${excludedHref}/`)
+  )
+
+  if (isExcluded) return false
+
+  if (options?.exact) {
+    return pathname === href
+  }
+
+  return pathname === href || pathname.startsWith(`${href}/`)
+}
 
 export function MobileNav() {
   const pathname = usePathname()
@@ -21,9 +41,10 @@ export function MobileNav() {
       <div className="flex items-center justify-around h-14">
         {tabs.map((tab) => {
           const Icon = tab.icon
-          const isActive = tab.href === '/'
-            ? pathname === '/'
-            : pathname?.startsWith(tab.href)
+          const isActive = isTabActive(pathname, tab.href, {
+            exact: tab.href === '/',
+            excludeHrefs: tab.excludeHrefs,
+          })
 
           return (
             <Link

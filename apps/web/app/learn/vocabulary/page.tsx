@@ -1,14 +1,16 @@
 'use client'
 
 import { useState } from 'react'
-import { Tabs, TabsList, TabsTrigger, Badge, Button } from '@repo/ui'
+import { Badge, Button } from '@repo/ui'
 import { vocabN5Data } from '@repo/question-bank'
 import type { VocabItem, JlptLevel } from '@repo/shared'
 import { VocabList } from '@/components/learn/VocabList'
 import { VocabReview } from '@/components/learn/VocabReview'
 import { BookOpen, RotateCcw } from 'lucide-react'
+import { useTranslation } from '@/hooks/useTranslation'
 
 export default function VocabularyPage() {
+  const { t } = useTranslation('learn')
   const [level, setLevel] = useState<JlptLevel>('N5')
   const [mode, setMode] = useState<'browse' | 'review'>('browse')
 
@@ -16,8 +18,8 @@ export default function VocabularyPage() {
     <div className="mx-auto max-w-6xl">
       <div className="mb-6 flex flex-wrap items-center justify-between gap-4">
         <div>
-          <h1 className="text-2xl font-bold">词汇学习</h1>
-          <p className="mt-1 text-sm text-muted-foreground">按JLPT级别系统学习日语词汇</p>
+          <h1 className="text-2xl font-bold">{t('vocabulary.title')}</h1>
+          <p className="mt-1 text-sm text-muted-foreground">{t('vocabulary.subtitle')}</p>
         </div>
         <div className="flex gap-2">
           <Button
@@ -26,7 +28,7 @@ export default function VocabularyPage() {
             onClick={() => setMode('browse')}
           >
             <BookOpen className="mr-1 h-4 w-4" />
-            浏览模式
+            {t('vocabulary.browse')}
           </Button>
           <Button
             variant={mode === 'review' ? 'default' : 'outline'}
@@ -34,7 +36,7 @@ export default function VocabularyPage() {
             onClick={() => setMode('review')}
           >
             <RotateCcw className="mr-1 h-4 w-4" />
-            复习模式
+            {t('vocabulary.review')}
           </Button>
         </div>
       </div>
@@ -48,7 +50,7 @@ export default function VocabularyPage() {
             onClick={() => l === 'N5' && setLevel(l)}
           >
             {l}
-            {l !== 'N5' && <span className="ml-1 text-xs">即将推出</span>}
+            {l !== 'N5' && <span className="ml-1 text-xs">{t('vocabulary.coming_soon')}</span>}
           </Badge>
         ))}
       </div>

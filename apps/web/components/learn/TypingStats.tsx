@@ -3,6 +3,7 @@
 import { Card, CardContent, CardHeader, CardTitle } from '@repo/ui'
 import { useTypingStore } from '@repo/shared/store/typingStore'
 import { Gauge, Target, Timer, TrendingUp } from 'lucide-react'
+import { useTranslation } from '@/hooks/useTranslation'
 
 interface TypingStatsProps {
   wpm: number
@@ -39,6 +40,7 @@ function CircularGauge({ value, max, label, unit, color }: { value: number; max:
 }
 
 export function TypingStats({ wpm, accuracy, time, isActive }: TypingStatsProps) {
+  const { t } = useTranslation('learn')
   const { results } = useTypingStore()
 
   const formatTime = (s: number) => {
@@ -57,12 +59,12 @@ export function TypingStats({ wpm, accuracy, time, isActive }: TypingStatsProps)
         <CardHeader className="pb-2">
           <CardTitle className="flex items-center gap-2 text-sm">
             <Gauge className="h-4 w-4" />
-            实时数据
+            {t('typing.live_stats')}
           </CardTitle>
         </CardHeader>
         <CardContent className="flex justify-around pb-4">
-          <CircularGauge value={wpm} max={120} label="速度" unit="WPM" color="text-sakura-500" />
-          <CircularGauge value={accuracy} max={100} label="准确率" unit="%" color="text-emerald-500" />
+          <CircularGauge value={wpm} max={120} label={t('typing.speed')} unit="WPM" color="text-sakura-500" />
+          <CircularGauge value={accuracy} max={100} label={t('typing.accuracy')} unit="%" color="text-emerald-500" />
         </CardContent>
       </Card>
 
@@ -71,7 +73,7 @@ export function TypingStats({ wpm, accuracy, time, isActive }: TypingStatsProps)
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Timer className="h-4 w-4" />
-              用时
+              {t('typing.time')}
             </div>
             <span className="font-mono font-medium">{formatTime(time)}</span>
           </div>
@@ -79,7 +81,7 @@ export function TypingStats({ wpm, accuracy, time, isActive }: TypingStatsProps)
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <TrendingUp className="h-4 w-4" />
-              历史平均 WPM
+              {t('typing.average_wpm')}
             </div>
             <span className="font-mono font-medium">{avgWpm}</span>
           </div>
@@ -87,7 +89,7 @@ export function TypingStats({ wpm, accuracy, time, isActive }: TypingStatsProps)
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Target className="h-4 w-4" />
-              总练习次数
+              {t('typing.total_sessions')}
             </div>
             <span className="font-mono font-medium">{results.length}</span>
           </div>
@@ -97,7 +99,7 @@ export function TypingStats({ wpm, accuracy, time, isActive }: TypingStatsProps)
       {results.length > 0 && (
         <Card>
           <CardHeader className="pb-2">
-            <CardTitle className="text-sm">最近成绩</CardTitle>
+            <CardTitle className="text-sm">{t('typing.recent_results')}</CardTitle>
           </CardHeader>
           <CardContent className="space-y-2 pb-4">
             {results.slice(-5).reverse().map((r, i) => (

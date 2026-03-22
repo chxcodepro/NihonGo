@@ -100,6 +100,35 @@
   --coral-light: #4C0519;
 }
 
+/* ===== 渐变边框动画 ===== */
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@keyframes gradient-spin {
+  to { --gradient-angle: 360deg; }
+}
+
+.module-card-border {
+  position: relative;
+  border-radius: var(--radius);
+  padding: 1.5px;
+  background: conic-gradient(
+    from var(--gradient-angle),
+    var(--g1),
+    var(--g2),
+    var(--g3),
+    var(--g1)
+  );
+  animation: gradient-spin 4s linear infinite;
+  transition: filter 0.3s;
+}
+.module-card-border:hover {
+  filter: brightness(1.15);
+}
+
 /* ===== 自定义动画 ===== */
 @keyframes float {
   0%, 100% { transform: translateY(0) rotate(0deg); opacity: 0.08; }
@@ -116,6 +145,10 @@
 @keyframes pulse-glow {
   0%, 100% { box-shadow: 0 0 20px hsl(346 78% 52% / 0); }
   50% { box-shadow: 0 0 30px hsl(346 78% 52% / 0.15); }
+}
+@keyframes kana-draw-stroke {
+  from { stroke-dashoffset: 500; }
+  to { stroke-dashoffset: 0; }
 }
 @keyframes grain {
   0%, 100% { transform: translate(0, 0); }

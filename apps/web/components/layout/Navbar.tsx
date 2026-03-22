@@ -25,6 +25,26 @@ import { ThemeToggle } from '@/components/common/ThemeToggle'
 import { LocaleSwitcher } from '@/components/common/LocaleSwitcher'
 import { useTranslation } from '@/hooks/useTranslation'
 
+function isNavItemActive(
+  pathname: string | null,
+  href: string,
+  options?: { exact?: boolean; excludeHrefs?: string[] }
+) {
+  if (!pathname) return false
+
+  const isExcluded = options?.excludeHrefs?.some((excludedHref) =>
+    pathname === excludedHref || pathname.startsWith(`${excludedHref}/`)
+  )
+
+  if (isExcluded) return false
+
+  if (options?.exact) {
+    return pathname === href
+  }
+
+  return pathname === href || pathname.startsWith(`${href}/`)
+}
+
 export function Navbar() {
   const pathname = usePathname()
   const { isLoggedIn, user, logout } = useAuthStore()
@@ -32,7 +52,7 @@ export function Navbar() {
   const { t } = useTranslation('nav')
 
   const navLinks = [
-    { href: '/learn', label: t('learn') },
+    { href: '/learn', label: t('learn'), excludeHrefs: ['/learn/typing'] },
     { href: '/learn/typing', label: t('typing') },
     { href: '/game', label: t('games') },
   ]
@@ -50,22 +70,28 @@ export function Navbar() {
             </span>
           </Link>
           <nav className="hidden md:flex items-center gap-1">
-            {navLinks.map((link) => (
-              <Link
-                key={link.href}
-                href={link.href}
-                className={`relative px-3 py-1.5 text-sm font-medium transition-colors hover:text-primary ${
-                  pathname?.startsWith(link.href)
-                    ? 'text-primary'
-                    : 'text-muted-foreground'
-                }`}
-              >
-                {link.label}
-                {pathname?.startsWith(link.href) && (
-                  <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-4 rounded-full bg-primary" />
-                )}
-              </Link>
-            ))}
+            {navLinks.map((link) => {
+              const isActive = isNavItemActive(pathname, link.href, {
+                excludeHrefs: link.excludeHrefs,
+              })
+
+              return (
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  className={`relative px-3 py-1.5 text-sm font-medium transition-colors hover:text-primary ${
+                    isActive
+                      ? 'text-primary'
+                      : 'text-muted-foreground'
+                  }`}
+                >
+                  {link.label}
+                  {isActive && (
+                    <span className="absolute bottom-0 left-1/2 -translate-x-1/2 h-0.5 w-4 rounded-full bg-primary" />
+                  )}
+                </Link>
+              )
+            })}
           </nav>
         </div>
 
@@ -124,20 +150,26 @@ export function Navbar() {
                 <SheetTitle>{t('home')}</SheetTitle>
               </SheetHeader>
               <nav className="mt-6 flex flex-col gap-3">
-                {navLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setSheetOpen(false)}
-                    className={`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent ${
-                      pathname?.startsWith(link.href)
-                        ? 'bg-accent text-primary'
-                        : 'text-muted-foreground'
-                    }`}
-                  >
-                    {link.label}
-                  </Link>
-                ))}
+                {navLinks.map((link) => {
+                  const isActive = isNavItemActive(pathname, link.href, {
+                    excludeHrefs: link.excludeHrefs,
+                  })
+
+                  return (
+                    <Link
+                      key={link.href}
+                      href={link.href}
+                      onClick={() => setSheetOpen(false)}
+                      className={`rounded-md px-3 py-2 text-sm font-medium transition-colors hover:bg-accent ${
+                        isActive
+                          ? 'bg-accent text-primary'
+                          : 'text-muted-foreground'
+                      }`}
+                    >
+                      {link.label}
+                    </Link>
+                  )
+                })}
                 {!isLoggedIn && (
                   <Link
                     href="/login"
